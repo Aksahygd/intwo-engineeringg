@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 60px;
+  background: #f8fafc;
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #475569;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 16px;
+}
+
+/* CAPABILITIES */
+
+.capabilities {
+  padding: 80px 10%;
+}
+
+.capabilities h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #475569;
+}
