@@ -1,130 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Intwo Engineering — Engineering Clarity</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-:root {
-  --bg: #0b1220;
-  --card: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.15);
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #3b82f6;
-}
+  <title>Intwo Engineering | Medical 3D Printing India</title>
 
-* {
-  box-sizing: border-box;
-}
+  <!-- SEO -->
+  <meta name="description" content="Intwo Engineering provides medical 3D printing in India, specializing in patient-specific anatomical models, surgical planning, SLA, SLS, and FDM prototyping with an engineering-first approach." />
+  <meta name="keywords" content="medical 3D printing India, anatomical models India, surgical planning 3D printing, SLA SLS FDM India, patient specific medical models" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.intwoengineering.in" />
 
-body {
-  margin: 0;
-  font-family: Inter, system-ui, -apple-system, sans-serif;
-  background: radial-gradient(1200px 600px at top, #111827, var(--bg));
-  color: var(--text);
-  line-height: 1.6;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Intwo Engineering — Medical 3D Printing in India" />
+  <meta property="og:description" content="Engineering-first medical and functional 3D printing partner for hospitals, startups and product teams in India." />
+  <meta property="og:type" content="website" />
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 64px 24px;
-}
+  <style>
+    :root {
+      --bg: #0e1a2b;
+      --card: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.18);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #1d4ed8;
+    }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 12px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(1000px 600px at top, #132238, var(--bg));
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-h3 {
-  margin-bottom: 8px;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 72px 24px;
+    }
 
-p {
-  color: var(--muted);
-}
+    h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
 
-.section {
-  margin-top: 80px;
-}
+    h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
+    h3 {
+      margin-bottom: 8px;
+    }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
-  backdrop-filter: blur(14px);
-}
+    p {
+      color: var(--muted);
+    }
 
-.hero {
-  max-width: 700px;
-}
+    .section {
+      margin-top: 96px;
+    }
 
-.badge {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(59,130,246,0.15);
-  color: #93c5fd;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(29,78,216,0.18);
+      color: #bfdbfe;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
 
-.buttons {
-  display: flex;
-  gap: 16px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
 
-.btn {
-  padding: 14px 22px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.08);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  backdrop-filter: blur(6px);
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      backdrop-filter: blur(14px);
+      transition: transform 0.25s ease;
+    }
 
-.btn:hover {
-  background: rgba(255,255,255,0.18);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transform: translateY(-2px);
-}
+    .card:hover {
+      transform: translateY(-4px);
+    }
 
-.btn.primary {
-  border-color: rgba(59,130,246,0.6);
-  background: linear-gradient(
-    135deg,
-    rgba(59,130,246,0.35),
-    rgba(59,130,246,0.15)
-  );
-}
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
 
-.footer {
-  margin-top: 100px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 14px;
-}
-</style>
+    .btn {
+      padding: 14px 22px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255,255,255,0.22);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn.primary {
+      border-color: rgba(29,78,216,0.6);
+      background: linear-gradient(
+        135deg,
+        rgba(29,78,216,0.45),
+        rgba(29,78,216,0.18)
+      );
+    }
+
+    /* Scroll animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer {
+      margin-top: 120px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 
 <body>
@@ -132,92 +157,99 @@ p {
 <div class="container">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="reveal">
     <span class="badge">Engineering Clarity</span>
     <h1>Intwo Engineering</h1>
     <p>
-      We are your dedicated engineering partner — not just a print bureau.
-      We turn concepts into accurate physical models using additive manufacturing,
-      helping you validate designs before committing to expensive tooling.
+      We provide <strong>medical 3D printing in India</strong> with an engineering-first mindset.
+      From patient-specific anatomical models to functional validation prototypes,
+      we help teams reduce risk before production or surgery.
     </p>
 
     <div class="buttons">
-      <a href="mailto:domnekarakshay@gmail.com?subject=Project%20Evaluation%20Request"
+      <a href="mailto:domnekarakshay@gmail.com?subject=Medical%203D%20Printing%20Inquiry"
          class="btn primary">
         Start a Conversation
       </a>
 
-      <a href="#capabilities" class="btn">
-        View Capabilities
+      <a href="https://instagram.intwoengineering.in"
+         target="_blank"
+         class="btn">
+        Visit Instagram
       </a>
     </div>
   </section>
 
-  <!-- FUNCTION FIRST -->
-  <section class="section">
+  <!-- APPROACH -->
+  <section class="section reveal">
     <h2>Our Function-First Approach</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card reveal">
         <h3>Function</h3>
-        <p>We understand the core purpose and functional requirements before printing.</p>
+        <p>We understand the clinical or functional intent before any printing begins.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <h3>Evaluation</h3>
-        <p>We assess real-world conditions, stress, and environment the part will face.</p>
+        <p>We assess stress, environment, and real-world operating conditions.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <h3>Method</h3>
-        <p>Material and process selection happens only after engineering validation.</p>
+        <p>Only then do we choose the right material and manufacturing process.</p>
       </div>
     </div>
   </section>
 
   <!-- CAPABILITIES -->
-  <section class="section" id="capabilities">
-    <h2>Comprehensive Capabilities</h2>
+  <section class="section reveal">
+    <h2>Medical & Functional 3D Printing Capabilities in India</h2>
+    <p>
+      We specialize in medical 3D printing in India, including patient-specific anatomical
+      models for surgical planning and functional prototypes for engineering validation.
+    </p>
+
     <div class="grid">
-      <div class="card">
+      <div class="card reveal">
         <h3>CAD Design & Optimization</h3>
-        <p>Geometry refinement and design validation for performance and manufacturability.</p>
+        <p>Geometry refinement for accuracy, strength, and manufacturability.</p>
       </div>
-      <div class="card">
-        <h3>Rapid Prototyping (FDM)</h3>
-        <p>Fast validation models for product fit, form, and function.</p>
+      <div class="card reveal">
+        <h3>FDM Prototyping</h3>
+        <p>Rapid validation models for form, fit, and early testing.</p>
       </div>
-      <div class="card">
-        <h3>High-Precision Models (SLA)</h3>
-        <p>Accuracy-driven parts for testing, presentation, and evaluation.</p>
+      <div class="card reveal">
+        <h3>SLA Precision Models</h3>
+        <p>High-accuracy parts for medical and engineering evaluation.</p>
       </div>
-      <div class="card">
-        <h3>Functional Parts (SLS)</h3>
-        <p>Durable, production-grade parts for real-world performance testing.</p>
+      <div class="card reveal">
+        <h3>SLS Functional Parts</h3>
+        <p>Durable, production-grade components for real-world testing.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHY INTWO -->
-  <section class="section">
+  <!-- WHY -->
+  <section class="section reveal">
     <h2>Why Clients Choose Intwo</h2>
     <div class="grid">
-      <div class="card">Usable models delivered in days, not weeks</div>
-      <div class="card">Engineering-first mindset</div>
-      <div class="card">FDM, SLA & SLS under one roof</div>
-      <div class="card">Founder-led involvement in early projects</div>
-      <div class="card">Short-cycle engineering & validation support</div>
-      <div class="card">Case-based medical & product modeling</div>
+      <div class="card reveal">Engineering-first mindset</div>
+      <div class="card reveal">Fast turnaround without compromising accuracy</div>
+      <div class="card reveal">Medical & functional printing under one roof</div>
+      <div class="card reveal">Founder-led involvement</div>
+      <div class="card reveal">Short-cycle validation support</div>
+      <div class="card reveal">Case-based medical modeling</div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section">
+  <section class="section reveal">
     <h2>Connect With Us</h2>
     <p>
-      If you are evaluating a design, case, or concept, reach out.
-      We’ll tell you what is possible — and what is not.
+      If you are evaluating a design, medical case, or concept,
+      we’ll tell you what is possible — and what is not.
     </p>
 
     <div class="buttons">
-      <a href="mailto:domnekarakshay@gmail.com?subject=Intwo%20Engineering%20Inquiry"
+      <a href="mailto:domnekarakshay@gmail.com?subject=Project%20Evaluation"
          class="btn primary">
         Email Us
       </a>
@@ -229,10 +261,24 @@ p {
   </section>
 
   <div class="footer">
-    © Intwo Engineering — Engineering Clarity
+    © Intwo Engineering — Medical 3D Printing India
   </div>
 
 </div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
