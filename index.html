@@ -5,157 +5,65 @@
   <title>Intwo Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Basic security -->
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' https://cdn.jsdelivr.net https://api.emailjs.com;
-                 script-src 'self' https://cdn.jsdelivr.net https://api.emailjs.com;
-                 style-src 'self' 'unsafe-inline';
-                 connect-src https://api.emailjs.com;">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #0f172a;
-    }
-
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: #f8fafc;
-    }
-
-    h1 span {
-      color: #2563eb;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    /* Chat widget */
-    .chatbox {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 320px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      padding: 16px;
-    }
-
-    .chatbox h4 {
-      margin: 0 0 10px;
-      font-size: 16px;
-    }
-
-    textarea, input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: 1px solid #cbd5f5;
-      font-size: 14px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      background: #2563eb;
-      color: white;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #475569;
-    }
-  </style>
+  <!-- SEO -->
+  <meta name="description" content="Intwo Engineering – Functional prototyping, CAD optimization, and precision 3D printing.">
 </head>
 
 <body>
 
-<header>
-  <h1>INTWO <span>ENGINEERING</span></h1>
-  <p>Medical 3D Printing & Precision Prototyping</p>
+<header class="hero">
+  <div class="hero-content">
+    <h1>
+      We Are Your <span>Engineering Partner</span><br>
+      Not Just a Service Provider
+    </h1>
 
-  <!-- Direct email button -->
-  <a class="btn" href="mailto:domenkarakshay@zohomail.in">
-    Email Us Directly
-  </a>
+    <p>
+      We turn concepts into functional, validated prototypes
+      before you invest in expensive production tooling.
+    </p>
+
+    <a href="mailto:domenkarakshay@zohomail.in" class="btn">
+      Start a Conversation
+    </a>
+  </div>
+
+  <div class="hero-image">
+    <img src="hero.jpg" alt="Engineering prototype">
+  </div>
 </header>
 
-<div class="section">
-  <h2>Medical 3D Printing</h2>
-  <p>
-    We create patient-specific anatomical models for surgical planning,
-    medical prototyping, and functional validation using SLA, SLS, and FDM.
-  </p>
-</div>
+<section class="capabilities">
+  <h2>Comprehensive Capabilities</h2>
 
-<!-- Chatbot -->
-<div class="chatbox">
-  <h4>Ask Intwo Engineering</h4>
+  <div class="cards">
+    <div class="card">
+      <h3>CAD Design & Optimization</h3>
+      <p>Designing for function, constraints, and manufacturability.</p>
+    </div>
 
-  <form id="chat-form">
-    <input type="text" name="user_name" placeholder="Your name" required />
-    <input type="email" name="user_email" placeholder="Your email" required />
-    <textarea name="message" rows="3" placeholder="Your question..." required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</div>
+    <div class="card">
+      <h3>Rapid Prototyping (FDM)</h3>
+      <p>Fast iterations using production-grade materials.</p>
+    </div>
+
+    <div class="card">
+      <h3>High-Precision Parts (SLA)</h3>
+      <p>Ultra-detailed parts with smooth surface finishes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Functional Components (SLS)</h3>
+      <p>Strong, end-use parts for real-world testing.</p>
+    </div>
+  </div>
+</section>
 
 <footer>
-  © 2024 Intwo Engineering · Hubballi, Karnataka
+  <p>© 2024 Intwo Engineering · Hubballi, Karnataka</p>
 </footer>
-
-<script>
-  (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // ← replace
-  })();
-
-  document.getElementById("chat-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
-      this
-    ).then(
-      function() {
-        alert("Message sent successfully!");
-      },
-      function(error) {
-        alert("Failed to send. Try again.");
-      }
-    );
-  });
-</script>
 
 </body>
 </html>
-
