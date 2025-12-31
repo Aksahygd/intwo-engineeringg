@@ -1,69 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Intwo Engineering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="style.css">
+<title>Intwo Engineering | Engineering Clarity for Startup Success</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Intwo Engineering – Functional prototyping, CAD optimization, and precision 3D printing.">
+<meta name="description" content="Engineering validation partner helping startups de-risk product development using CAD, FDM, SLA, and SLS." />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue:#1f4fd8;
+  --green:#16a34a;
+  --dark:#0f172a;
+  --muted:#64748b;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --radius:14px;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; font-family:Inter,sans-serif; }
+
+body { background:var(--bg); color:var(--dark); line-height:1.6; }
+
+/* ---------- NAV ---------- */
+header {
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+  border-bottom:1px solid #e5e7eb;
+}
+
+nav {
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a {
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:500;
+  margin-left:24px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .25s ease;
+}
+
+.btn-primary {
+  background:var(--green);
+  color:#fff;
+}
+
+.btn-outline {
+  border:2px solid var(--blue);
+  color:var(--blue);
+}
+
+.btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(0,0,0,.15);
+}
+
+.btn span {
+  transition:transform .25s ease;
+}
+
+.btn:hover span {
+  transform:translateX(4px);
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+  max-width:1200px;
+  margin:auto;
+  padding:90px 24px;
+}
+
+.hero {
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:56px;
+  align-items:center;
+}
+
+.hero h1 {
+  font-size:52px;
+  line-height:1.1;
+  margin:20px 0;
+}
+
+.hero h1 span { color:var(--blue); }
+
+.hero p {
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:32px;
+}
+
+.card {
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 12px 32px rgba(0,0,0,.08);
+}
+
+.grid-4, .process, .stats {
+  display:grid;
+  gap:24px;
+}
+
+.grid-4 { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+.process { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+.stats { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+
+h2 { font-size:36px; margin-bottom:16px; }
+h2 span { color:var(--blue); }
+
+/* ---------- CTA ---------- */
+.cta {
+  background:linear-gradient(135deg,#1f4fd8,#2563eb);
+  color:#fff;
+  text-align:center;
+  padding:110px 24px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background:#020617;
+  color:#cbd5f5;
+  padding:48px 24px;
+  text-align:center;
+}
+
+/* ---------- SCROLL ANIMATIONS ---------- */
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.visible {
+  opacity:1;
+  transform:none;
+}
+
+.stagger > * {
+  opacity:0;
+  transform:translateY(30px);
+}
+
+.stagger.visible > * {
+  opacity:1;
+  transform:none;
+}
+
+.stagger.visible > *:nth-child(1){transition-delay:.1s}
+.stagger.visible > *:nth-child(2){transition-delay:.2s}
+.stagger.visible > *:nth-child(3){transition-delay:.3s}
+.stagger.visible > *:nth-child(4){transition-delay:.4s}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:900px){
+  .hero { grid-template-columns:1fr; }
+  .hero h1 { font-size:40px; }
+}
+</style>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="hero-content">
-    <h1>
-      We Are Your <span>Engineering Partner</span><br>
-      Not Just a Service Provider
-    </h1>
-
-    <p>
-      We turn concepts into functional, validated prototypes
-      before you invest in expensive production tooling.
-    </p>
-
-    <a href="mailto:domenkarakshay@zohomail.in" class="btn">
-      Start a Conversation
-    </a>
-  </div>
-
-  <div class="hero-image">
-    <img src="hero.jpg" alt="Engineering prototype">
-  </div>
+<header>
+<nav>
+<strong>Intwo Engineering</strong>
+<div>
+<a href="#approach">Our Approach</a>
+<a href="#process">Process</a>
+<a href="mailto:domnekarakshay@zohomail.in" class="btn btn-primary">
+Start a Conversation <span>→</span>
+</a>
+</div>
+</nav>
 </header>
 
-<section class="capabilities">
-  <h2>Comprehensive Capabilities</h2>
+<section class="container hero reveal">
+<div>
+<small style="color:var(--green);font-weight:600;">Engineering Partner, Not Service Provider</small>
+<h1>Engineering Clarity<br><span>for Startup Success</span></h1>
+<p>
+We’re not a print bureau. We’re your engineering validation partner—bringing structure,
+speed, and confidence before manufacturing.
+</p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>CAD Design & Optimization</h3>
-      <p>Designing for function, constraints, and manufacturability.</p>
-    </div>
+<a href="mailto:domnekarakshay@zohomail.in" class="btn btn-primary">
+Start a Conversation <span>→</span>
+</a>
+<a href="#approach" class="btn btn-outline">
+Our Approach <span>→</span>
+</a>
+</div>
 
-    <div class="card">
-      <h3>Rapid Prototyping (FDM)</h3>
-      <p>Fast iterations using production-grade materials.</p>
-    </div>
+<div class="card">
+<h3>Engineering Validation Before Manufacturing</h3>
+<p style="margin-top:12px;color:var(--muted);">
+Reduce downstream production risks through early engineering validation and structured prototyping.
+</p>
+<h2 style="margin-top:24px;color:var(--blue);">73% Risk Reduction</h2>
+</div>
+</section>
 
-    <div class="card">
-      <h3>High-Precision Parts (SLA)</h3>
-      <p>Ultra-detailed parts with smooth surface finishes.</p>
-    </div>
+<section class="container reveal" id="approach">
+<h2>Engineering Capabilities That <span>De-Risk Development</span></h2>
+<p style="color:var(--muted);max-width:720px;">
+From CAD optimization to production-grade prototyping.
+</p>
 
-    <div class="card">
-      <h3>Functional Components (SLS)</h3>
-      <p>Strong, end-use parts for real-world testing.</p>
-    </div>
-  </div>
+<div class="grid-4 stagger">
+<div class="card">CAD Engineering & Optimization</div>
+<div class="card">FDM Prototyping</div>
+<div class="card">SLA High-Resolution Printing</div>
+<div class="card">SLS Production-Grade Parts</div>
+</div>
+
+<div style="margin-top:40px;">
+<a href="#process" class="btn btn-primary">
+Explore Our Capabilities <span>→</span>
+</a>
+</div>
+</section>
+
+<section class="container reveal" id="process">
+<h2>Our Engineering <span>Process</span></h2>
+
+<div class="process stagger">
+<div class="card">01 · Discovery & Requirements</div>
+<div class="card">02 · Design Validation</div>
+<div class="card">03 · Rapid Prototyping</div>
+<div class="card">04 · Testing & Refinement</div>
+</div>
+
+<div style="margin-top:40px;">
+<a href="#contact" class="btn btn-primary">
+View Detailed Process <span>→</span>
+</a>
+</div>
+</section>
+
+<section class="container reveal">
+<h2>Engineering Partners Who <span>Deliver Results</span></h2>
+
+<div class="stats stagger">
+<div class="card">15+ Projects Delivered</div>
+<div class="card">98% Client Satisfaction</div>
+<div class="card">100% Quality Assured</div>
+<div class="card">48hrs Avg Turnaround</div>
+</div>
+</section>
+
+<section class="cta reveal" id="contact">
+<h2>Let’s Turn Engineering Challenges<br><span>Into Validated Solutions</span></h2>
+<p style="max-width:720px;margin:24px auto;">
+Founder-led engineering support for startups and engineering teams.
+</p>
+<a href="mailto:domnekarakshay@zohomail.in" class="btn btn-primary">
+Schedule a Consultation <span>→</span>
+</a>
 </section>
 
 <footer>
-  <p>© 2024 Intwo Engineering · Hubballi, Karnataka</p>
+<p>© 2025 Intwo Engineering</p>
+<p><a href="mailto:domnekarakshay@zohomail.in">domnekarakshay@zohomail.in</a></p>
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{ threshold:0.15 });
+
+document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
