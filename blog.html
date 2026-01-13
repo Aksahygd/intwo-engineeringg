@@ -53,7 +53,49 @@ async function loadNews(){
   });
 }
 
+<div id="posts"></div>
+    <script>
+async function loadNews() {
+  const container = document.getElementById("posts");
+
+  // Step A: show loading state
+  container.innerHTML = "<p>Loading latest funding updates...</p>";
+
+  try {
+    // Step B: call YOUR backend API (not Gorq directly)
+    const res = await fetch("/api/startup-news");
+    const data = await res.json();
+
+    // Step C: clear loading text
+    container.innerHTML = "";
+
+    // Step D: render each news item
+    data.forEach(item => {
+      const post = document.createElement("div");
+      post.className = "post";
+
+      post.innerHTML = `
+        <h2>${item.title}</h2>
+        <small>${item.date} · ${item.source}</small>
+        <p>${item.summary}</p>
+        <a href="${item.url}" target="_blank">
+          Read original source →
+        </a>
+      `;
+
+      container.appendChild(post);
+    });
+
+  } catch (error) {
+    // Step E: fallback if API fails
+    container.innerHTML =
+      "<p>Unable to load funding updates right now.</p>";
+  }
+}
+
+// Step F: run when page loads
 loadNews();
 </script>
+
 </body>
 </html>
