@@ -12,26 +12,36 @@
 
 <style>
 :root {
-  --blue:#1f4fd8;
-  --green:#16a34a;
-  --dark:#0f172a;
-  --muted:#64748b;
-  --bg:#f8fafc;
-  --card:#ffffff;
+  --bg-primary:#0b0b0d;
+  --bg-secondary:#111114;
+  --card:#141417;
+
+  --text-primary:#ffffff;
+  --text-secondary:#cfd0d6;
+  --text-muted:#9a9aa3;
+
+  --accent-gradient:linear-gradient(90deg,#8b5cf6,#6366f1,#22d3ee);
+  --accent-solid:#6366f1;
+
   --radius:14px;
 }
 
 * { box-sizing:border-box; margin:0; padding:0; font-family:Inter,sans-serif; }
 
-body { background:var(--bg); color:var(--dark); line-height:1.6; }
+body {
+  background:var(--bg-primary);
+  color:var(--text-secondary);
+  line-height:1.6;
+}
 
 /* ---------- NAV ---------- */
 header {
-  background:#fff;
+  background:rgba(11,11,13,.9);
   position:sticky;
   top:0;
   z-index:50;
-  border-bottom:1px solid #e5e7eb;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #1f1f24;
 }
 
 nav {
@@ -43,11 +53,19 @@ nav {
   align-items:center;
 }
 
+nav strong {
+  color:var(--text-primary);
+}
+
 nav a {
   text-decoration:none;
-  color:var(--dark);
+  color:var(--text-secondary);
   font-weight:500;
   margin-left:24px;
+}
+
+nav a:hover {
+  color:#fff;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -63,18 +81,19 @@ nav a {
 }
 
 .btn-primary {
-  background:var(--green);
+  background:var(--accent-gradient);
   color:#fff;
 }
 
 .btn-outline {
-  border:2px solid var(--blue);
-  color:var(--blue);
+  border:1px solid #2a2a32;
+  color:var(--text-secondary);
+  background:transparent;
 }
 
 .btn:hover {
   transform:translateY(-2px);
-  box-shadow:0 12px 24px rgba(0,0,0,.15);
+  box-shadow:0 16px 32px rgba(0,0,0,.35);
 }
 
 .btn span {
@@ -89,35 +108,40 @@ nav a {
 .container {
   max-width:1200px;
   margin:auto;
-  padding:90px 24px;
+  padding:100px 24px;
 }
 
 .hero {
   display:grid;
   grid-template-columns:1.2fr 1fr;
-  gap:56px;
+  gap:64px;
   align-items:center;
 }
 
 .hero h1 {
-  font-size:52px;
-  line-height:1.1;
+  font-size:54px;
+  line-height:1.05;
   margin:20px 0;
+  color:var(--text-primary);
 }
 
-.hero h1 span { color:var(--blue); }
+.gradient-text {
+  background:var(--accent-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
 .hero p {
   font-size:18px;
-  color:var(--muted);
-  margin-bottom:32px;
+  color:var(--text-muted);
+  margin-bottom:36px;
 }
 
 .card {
-  background:var(--card);
+  background:linear-gradient(180deg,#16161b,#101014);
   border-radius:var(--radius);
   padding:28px;
-  box-shadow:0 12px 32px rgba(0,0,0,.08);
+  border:1px solid #1f1f26;
 }
 
 .grid-4, .process, .stats {
@@ -129,23 +153,28 @@ nav a {
 .process { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
 .stats { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
 
-h2 { font-size:36px; margin-bottom:16px; }
-h2 span { color:var(--blue); }
+h2 {
+  font-size:38px;
+  margin-bottom:16px;
+  color:var(--text-primary);
+}
 
 /* ---------- CTA ---------- */
 .cta {
-  background:linear-gradient(135deg,#1f4fd8,#2563eb);
+  background:radial-gradient(circle at top,#1b1b2f,#0b0b0d 60%);
   color:#fff;
   text-align:center;
-  padding:110px 24px;
+  padding:120px 24px;
+  border-top:1px solid #1f1f26;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
   background:#020617;
-  color:#cbd5f5;
+  color:#9aa0b6;
   padding:48px 24px;
   text-align:center;
+  border-top:1px solid #1f1f26;
 }
 
 /* ---------- SCROLL ANIMATIONS ---------- */
@@ -178,9 +207,10 @@ footer {
 /* ---------- MOBILE ---------- */
 @media(max-width:900px){
   .hero { grid-template-columns:1fr; }
-  .hero h1 { font-size:40px; }
+  .hero h1 { font-size:42px; }
 }
 </style>
+
 </head>
 
 <body>
